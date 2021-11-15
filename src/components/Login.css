@@ -1,0 +1,14 @@
+.botones{
+    background-color: #724293;
+    border: 0ch;
+    margin: 5px;
+    border-color: white;
+}
+
+.botones:hover{
+    background-color: rgb(193, 144, 240);
+}
+
+.div{
+    width: 100%;
+}

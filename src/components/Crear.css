@@ -1,0 +1,27 @@
+.letra{
+    color: rgb(0, 0, 0);
+}
+
+.letra:hover{
+    color: rgb(230, 161, 104);
+}
+
+.botones{
+    background-color: #724293;
+    border: 0ch;
+    margin: 5px;
+    border-color: white;
+}
+
+.botones:hover{
+    background-color: rgb(193, 144, 240);
+}
+
+.div{
+    position: relative;
+    top: 3rem;
+    right: 2rem;
+    bottom: 5rem;
+}
+
+
