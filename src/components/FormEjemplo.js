@@ -77,11 +77,14 @@ export default function FormExample() {
     return (
         <div className="div container align-items-center">
 
-            <Card><Card.Header as="h5" className="letra text-center">Crear Productos</Card.Header></Card>
+            <Card><Card.Header as="h5" className="letra text-center">Editar Productos</Card.Header></Card>
             <></>
             <></>
 
             <div className="row">
+                <div className="col-md-6">
+                    <CargarImagenes />
+                </div>
                 <div className="col-md-6">
 
                     <Card>
@@ -227,12 +230,8 @@ export default function FormExample() {
                         </Card.Body>
                     </Card>
                 </div>
-                <div className="col-md-6">
-                    <CargarImagenes />
-                </div>
 
             </div>
-            
         </div>
     );
 }
