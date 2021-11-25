@@ -18,7 +18,7 @@ const Header = props => {
                         height="40"
                         className="d-inline-block align-top"
                     />
-                    <b className="letraHeader">Catálogo</b>
+                    <b className="letraHeader">Catálogo de Productos</b>
                 </Navbar.Brand>
             </Container>
         </Navbar>
