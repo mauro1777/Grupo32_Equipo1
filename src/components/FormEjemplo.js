@@ -13,6 +13,7 @@ import './Modificar.css'
 import Input from './Input.js'
 import styled, {css} from 'styled-components'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom'
+import { Inputt } from './Elementos.js'
 
 
 export default function FormExample() {
@@ -86,12 +87,10 @@ export default function FormExample() {
                     <CargarImagenes />
                 </div>
                 <div className="col-md-6">
-
                     <Card>
-
                         <Card.Body >
                             <Form onSubmit={onSubmit}>
-                                <Input 
+                                <Inputt 
                                 estado = {codigo}
                                 cambiarEstado = {cambiarCodido}
                                 label="Código" 
@@ -104,7 +103,7 @@ export default function FormExample() {
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom02">
-                                    <Input
+                                    <Inputt
                                     estado = {nombre}
                                     cambiarEstado = {cambiarNombre}
                                     label="Nombre del producto" 
@@ -115,7 +114,7 @@ export default function FormExample() {
                                     name="nombre" />
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustomUsername">
-                                    <Input 
+                                    <Inputt 
                                     estado = {descripcion}
                                     cambiarEstado = {cambiarDescripcion}
                                     label="Descripción" 
@@ -141,7 +140,7 @@ export default function FormExample() {
                                     </div>
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom03">
-                                    <Input 
+                                    <Inputt 
                                     estado = {sabor}
                                     cambiarEstado = {cambiarSabor}
                                     label="Sabor" 
@@ -155,7 +154,7 @@ export default function FormExample() {
 
                                 <Form.Group as={Col} md="12" controlId="validationCustom03">
                                     <div>
-                                    <Form.Label className="label">Marca</Form.Label>
+                                    <Form.Labell className="label">Marca</Form.Labell>
                                         <InputGroup className="mb-3">
                                             <Form.Select
                                                 aria-describedby="basic-addon1">
@@ -176,7 +175,7 @@ export default function FormExample() {
 
 
                                 <Form.Group as={Col} md="12" controlId="validationCustom04">
-                                    <Input 
+                                    <Inputt 
                                     estado = {presentacion}
                                     cambiarEstado = {cambiarPresentacion}
                                     label="Presentación" 
@@ -187,7 +186,7 @@ export default function FormExample() {
                                     name="presentacion"/>
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom05">
-                                    <Input 
+                                    <Inputt 
                                     estado = {contenido}
                                     cambiarEstado = {cambiarContenido}
                                     label="Contenido" 
@@ -198,7 +197,7 @@ export default function FormExample() {
                                     name="contenido" />
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom05">
-                                    <Input 
+                                    <Inputt 
                                     estado = {valor}
                                     cambiarEstado = {cambiarValor}
                                     label="Valor" 

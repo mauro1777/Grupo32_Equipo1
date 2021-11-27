@@ -6,13 +6,13 @@ import FormControl from 'react-bootstrap/FormControl'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useState } from 'react'
-import CargarImagenes from './CargarImagenes.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import './Modificar.css'
 import Input from './Input.js'
 import styled, {css} from 'styled-components'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom'
+import Images from './Images.js'
 
 
 export default function FormExample() {
@@ -72,7 +72,7 @@ export default function FormExample() {
 
             <div className="row">
                 <div className="col-md-6">
-                    <CargarImagenes />
+                    <Images />
                 </div>
                 <div className="col-md-6">
 

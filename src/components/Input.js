@@ -4,7 +4,7 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import './Modificar.css'
-import { Input, Label, LeyendaError, IconoValidacion } from './Elementos';
+import { Inputt, Labell, LeyendaError, IconoValidacion } from './Elementos';
 
 /*** const Label = styled.label`
     ${props => props.valido === 'false' && css `
@@ -32,9 +32,9 @@ const ComponenteInput = ({ estado, cambiarEstado, label, placeholder, leyenda, e
 
     return (
         <div>
-            <Label className="label" valido={estado.valido}>{label}</Label>
+            <Labell className="label" valido={estado.valido}>{label}</Labell>
             <InputGroup>
-                <Input
+                <Inputt
                     required
                     placeholder={placeholder}
                     id={name}
@@ -43,7 +43,7 @@ const ComponenteInput = ({ estado, cambiarEstado, label, placeholder, leyenda, e
                     onKeyUp={validacion}
                     onBlur={validacion}
                     valido={estado.valido}>
-                </Input>
+                </Inputt>
                 <IconoValidacion
                         icon={estado.valido === 'true' ? faCheckCircle : faTimesCircle}
                         valido={estado.valido}

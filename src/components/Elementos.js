@@ -7,7 +7,7 @@ const colores = {
 	exito: "#1ed12d"
 }
 
-const Input = styled.input`
+const Inputt = styled.input`
 	width: 100%;
 	background: #fff;
 	border-radius: 3px;
@@ -29,7 +29,7 @@ const Input = styled.input`
 	`}
 `;
 
-const Label = styled.label`
+const Labell = styled.label`
 
 	${props => props.valido === 'false' && css`
 		color: ${colores.error};
@@ -70,6 +70,17 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 	`}
 `;
 
+const IconoCamara = styled(FontAwesomeIcon)`
+	left: 15px;
+	border: 5px;
+	bottom: 14px;
+	z-index: 100;
+	font-size: 20px;
+	color: white;
+	padding: 2px
+	display: inline-block;
+`;
+
 export {
-	Input, Label, LeyendaError, IconoValidacion
+	Inputt, Labell, LeyendaError, IconoValidacion, IconoCamara
 };
