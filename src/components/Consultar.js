@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 import "./Consultar.css"
-import CargarImagenes from './CargarImagenes.js'
+import ImagenesConsultar from './ImagenesConsultar.js'
 import { useState } from 'react'
 import Row from 'react-bootstrap/esm/Row'
 import Col from 'react-bootstrap/esm/Col'
@@ -24,6 +24,18 @@ export default function Crear() {
     //const [contenido]
     //const [valor]
 
+    const expresiones = {
+        codigo: /^\d{1,5}$/, // 1 a 5 numeros
+        nombreproducto: /^[a-zA-ZÀ-ÿ\s]{1,15}$/, // Letras y espacios, pueden llevar acentos.
+        descripcion: /^[a-zA-ZÀ-ÿ\s]{1,100}$/, // Letras y espacios, pueden llevar acentos.
+        sabor: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+        presentacion: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+        contenido: /^.{1,5}$/, // solo números.
+        valor: /^\d{1,15}$/, //solo números
+        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+        
+    }
+
     return (
         <div className="div container align-items-center">
             <Card><Card.Header as="h5" className="letra text-center">Consultar Productos</Card.Header></Card>
@@ -31,7 +43,7 @@ export default function Crear() {
             <></>
             <div className="row">
                 <div className="col-md-6">
-                    <CargarImagenes />
+                    <ImagenesConsultar />
                 </div>
                 <div className="col-md-6">
                     <Card>

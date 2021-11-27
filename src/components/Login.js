@@ -1,26 +1,36 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
 import './Login.css'
 
 export default function Login() {
 
     return (
         <>
-            <h1>INICIAR SESIÓN</h1>
-            <Form>
-                <Form.Group className="mb-3"  controlId="Email">
-                    <Form.Label>Usuario</Form.Label>
-                    <Form.Control type="email" placeholder="Ingrese el correo" />
-                </Form.Group>
+        <div className="div container align-items-center" id="login" border="light">
+            <Card style={{ width: '28rem' }}>
+            <Card.Header as="h5" className="letra text-center">INICIAR SESIÓN </Card.Header>
 
-                <Form.Group className="mb-3" controlId="Password">
-                    <Form.Label>Contraseña</Form.Label>
-                    <Form.Control type="password" placeholder="Contraseña" />
-                </Form.Group>
-                <Button variant="primary" type="submit" className="botones rounded-0" style={{background:"#724293"}}  >
-                    Ingresar
-                </Button>
-            </Form>
+                <Form>
+                    <Form.Group className="mb-3" controlId="Email">
+                        <Form.Label>Usuario</Form.Label>
+                        <Form.Control type="email" placeholder="Ingrese el correo" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="Password">
+                        <Form.Label>Contraseña</Form.Label>
+                        <Form.Control type="password" placeholder="Contraseña" />
+                    </Form.Group>
+                    
+                    <Button variant="primary" type="submit" className="botones rounded-0" style={{ background: "#724293" }}  >
+                        Ingresar
+                    </Button>
+                    <Button variant="primary" type="submit" className="botones rounded-0" style={{ background: "#724293" }}  >
+                        Volver
+                    </Button>
+                </Form>
+            </Card>
+            </div>
         </>
     );
 

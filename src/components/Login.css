@@ -12,3 +12,13 @@
 .div{
     width: 100%;
 }
+
+h1{
+    text-align: center;
+}
+
+#login{
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 19vh;
+}
