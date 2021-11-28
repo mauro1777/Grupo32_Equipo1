@@ -1,6 +1,5 @@
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 import "./Consultar.css"
@@ -9,6 +8,7 @@ import { useState } from 'react'
 import Row from 'react-bootstrap/esm/Row'
 import Col from 'react-bootstrap/esm/Col'
 import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav';
 
 export default function Crear() {
 
@@ -152,7 +152,7 @@ export default function Crear() {
                             <div>
                                 <tr >
                                     <td>
-                                        <Button className="botones rounded-0 " >Volver</Button>
+                                        <Button className="botones rounded-0 " ><Nav.Link href="/">Volver</Nav.Link></Button>
 
                                     </td>
                                 </tr>

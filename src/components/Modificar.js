@@ -5,6 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Nav from 'react-bootstrap/Nav';
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
@@ -198,7 +199,7 @@ export default function FormExample() {
                                 <div>
                                     <tr >
                                         <td>
-                                            <Button className="botones rounded-0" >Volver</Button>
+                                            <Button className="botones rounded-0" ><Nav.Link href="/">Volver</Nav.Link></Button>
                                             <Button type="submit" className="botones rounded-0" >Modificar Producto</Button>
                                             {formularioValido === true && <p className="mensajexito">Formulario enviado exitosamente!</p>}
                                         </td>

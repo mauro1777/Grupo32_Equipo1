@@ -13,12 +13,12 @@
     width: 100%;
 }
 
-h1{
-    text-align: center;
+body{
+    align-items: center;
 }
 
 #login{
-    align-items: center;
-    margin-top: 10vh;
-    margin-bottom: 19vh;
+   /* align-items: ;*/
+    margin-top: 3.3vh;
+    margin-bottom: 27vh;
 }

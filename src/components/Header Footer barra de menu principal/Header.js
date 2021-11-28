@@ -20,9 +20,9 @@ const Header = props => {
                         />
                         <b className="letraHeader">Catálogo de Productos</b>
                         <Nav className="me-auto">
-                            <Nav.Link href="#crear">Crear producto</Nav.Link>
-                            <Nav.Link href="#features">Modificar producto</Nav.Link>
-                            <Nav.Link href="#pricing">Consultar producto</Nav.Link>
+                            <Nav.Link href="/crear">Crear producto</Nav.Link>
+                            <Nav.Link href="/modificar">Modificar producto</Nav.Link>
+                            <Nav.Link href="/consultar">Consultar producto</Nav.Link>
                             <Nav.Link href="#pricing">Recetas</Nav.Link>
                         </Nav>
                     </Navbar.Brand>
