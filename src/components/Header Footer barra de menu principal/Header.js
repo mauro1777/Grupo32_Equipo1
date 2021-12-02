@@ -23,7 +23,7 @@ const Header = props => {
                             <Nav.Link href="/crear">Crear producto</Nav.Link>
                             <Nav.Link href="/modificar">Modificar producto</Nav.Link>
                             <Nav.Link href="/consultar">Consultar producto</Nav.Link>
-                            <Nav.Link href="#pricing">Recetas</Nav.Link>
+                            <Nav.Link href="/recetas">Recetas</Nav.Link>
                         </Nav>
                     </Navbar.Brand>
                 </Container>

@@ -9,6 +9,7 @@ import Header from './components/Header Footer barra de menu principal/Header'
 import Footer from './components/Header Footer barra de menu principal/Footer'
 import Consultar from './components/Consultar.js'
 import Images from './components/Images.js'
+import Recetas from './components/Recetas'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/crear" element={<Crear />}></Route>
           <Route path="/modificar" element={<Modificar />}></Route>
           <Route path="/consultar" element={<Consultar />}></Route>
+          <Route path="/recetas" element={<Recetas />}></Route>
         </Routes>
       </BrowserRouter>
       <Footer />
