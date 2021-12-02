@@ -6,17 +6,26 @@ import FormControl from 'react-bootstrap/FormControl'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useState } from 'react'
-import CargarImagenes from './CargarImagenes.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import './Modificar.css'
 import Input from './Input.js'
 import styled, {css} from 'styled-components'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom'
-import { Inputt } from './Elementos.js'
+import Images from './Images.js'
 
 
 export default function FormExample() {
+
+    /** const Input = styled.input`
+        ${props => props.valido === 'true' && css `
+        border: 3px solid transparent;
+        `}
+
+        ${props => props.valido === 'false' && css `
+        border: 3px solid color: #F66060  !important;
+        `}
+    `; */
 
     const [codigo, cambiarCodido] = useState({campo:'', valido: null });
     const [nombre, cambiarNombre] = useState({campo:'', valido: null });
@@ -67,20 +76,20 @@ export default function FormExample() {
 
     return (
         <div className="div container align-items-center">
-
-            <Card><Card.Header as="h5" className="letra text-center">Editar Productos</Card.Header></Card>
+            <hr/>
+            <Card><Card.Header as="h5" className="letra text-center">Crear Productos</Card.Header></Card>
+            <hr/>
             <></>
             <></>
 
             <div className="row">
                 <div className="col-md-6">
-                    <CargarImagenes />
-                </div>
-                <div className="col-md-6">
+
                     <Card>
+
                         <Card.Body >
                             <Form onSubmit={onSubmit}>
-                                <Inputt 
+                                <Input 
                                 estado = {codigo}
                                 cambiarEstado = {cambiarCodido}
                                 label="Código" 
@@ -88,12 +97,12 @@ export default function FormExample() {
                                 type="number"
                                 leyenda = "El código debe tener menos de 5 cifras" 
                                 expresionregular ={expresiones.codigo}
-                                name="codigo"
+                                name="cod"
                                 />
                                 <Form.Group as={Col} md="12" controlId="validationCustom01">
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom02">
-                                    <Inputt
+                                    <Input
                                     estado = {nombre}
                                     cambiarEstado = {cambiarNombre}
                                     label="Nombre del producto" 
@@ -101,10 +110,10 @@ export default function FormExample() {
                                     type="text"
                                     leyenda="El nombre del producto solo puede contener letras, espacios y acentos."
                                     expresionregular ={expresiones.nombreproducto}
-                                    name="nombre" />
+                                    name="name" />
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustomUsername">
-                                    <Inputt 
+                                    <Input 
                                     estado = {descripcion}
                                     cambiarEstado = {cambiarDescripcion}
                                     label="Descripción" 
@@ -112,10 +121,10 @@ export default function FormExample() {
                                     type="text"
                                     leyenda="La descripción del producto solo puede contener letras, espacios y acentos."
                                     expresionregular ={expresiones.descripcion}
-                                    name="descripcion"
+                                    name="description"
                                      />
                                 </Form.Group>
-                                <Form.Group as={Col} md="12" controlId="validationCustomUsername">
+                                <Form.Group as={Col} md="12" name="kind" controlId="validationCustomUsername">
                                     <div>
                                     <Form.Label className="label">Tipo</Form.Label>
                                         <InputGroup className="mb-3">
@@ -130,7 +139,7 @@ export default function FormExample() {
                                     </div>
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom03">
-                                    <Inputt 
+                                    <Input 
                                     estado = {sabor}
                                     cambiarEstado = {cambiarSabor}
                                     label="Sabor" 
@@ -138,13 +147,13 @@ export default function FormExample() {
                                     type="text"
                                     leyenda="Ingresa un sabor válido." 
                                     expresionregular = {expresiones.sabor}
-                                    name="sabor"/>
+                                    name="flavor"/>
                                     
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="12" controlId="validationCustom03">
+                                <Form.Group as={Col} md="12" name= "brand" controlId="validationCustom03">
                                     <div>
-                                    <Form.Labell className="label">Marca</Form.Labell>
+                                    <Form.Label className="label">Marca</Form.Label>
                                         <InputGroup className="mb-3">
                                             <Form.Select
                                                 aria-describedby="basic-addon1">
@@ -165,7 +174,7 @@ export default function FormExample() {
 
 
                                 <Form.Group as={Col} md="12" controlId="validationCustom04">
-                                    <Inputt 
+                                    <Input 
                                     estado = {presentacion}
                                     cambiarEstado = {cambiarPresentacion}
                                     label="Presentación" 
@@ -173,10 +182,10 @@ export default function FormExample() {
                                     type="text"
                                     leyenda="La presentación del producto solo puede contener letras, espacios y acentos." 
                                     expresionregular ={expresiones.presentacion}
-                                    name="presentacion"/>
+                                    name="presentation"/>
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom05">
-                                    <Inputt 
+                                    <Input 
                                     estado = {contenido}
                                     cambiarEstado = {cambiarContenido}
                                     label="Contenido" 
@@ -184,10 +193,10 @@ export default function FormExample() {
                                     type="number"
                                     leyenda="El contenido del producto solo puede contener números."
                                     expresionregular ={expresiones.contenido}
-                                    name="contenido" />
+                                    name="cont" />
                                 </Form.Group>
                                 <Form.Group as={Col} md="12" controlId="validationCustom05">
-                                    <Inputt 
+                                    <Input 
                                     estado = {valor}
                                     cambiarEstado = {cambiarValor}
                                     label="Valor" 
@@ -195,7 +204,7 @@ export default function FormExample() {
                                     type="number"
                                     leyenda="El valor del producto debe ser un número sin puntos."
                                     expresionregular ={expresiones.valor}
-                                    name="valor"/>
+                                    name="price"/>
                                 </Form.Group>
 
                                 <div>
@@ -219,8 +228,11 @@ export default function FormExample() {
                         </Card.Body>
                     </Card>
                 </div>
-
+                <div className="col-md-6">
+                    <Images />
+                </div>
             </div>
+            <hr/>
         </div>
     );
 }

@@ -9,13 +9,20 @@ import Header from './components/Header Footer barra de menu principal/Header'
 import Footer from './components/Header Footer barra de menu principal/Footer'
 import Consultar from './components/Consultar.js'
 import Images from './components/Images.js'
+import UnauthRouter from './routers/UnauthRouter';
+import AuthRouter from './routers/AuthRouter';
+import { useContext } from 'react';
+import AuthContext from './context/AuthContext';
 
 
 function App() {
 
+  const {auth} = useContext(AuthContext);
+
   return (
     <div className="App">
-      <Header />
+      {auth? <AuthRouter/> : <UnauthRouter/>}
+      {/** <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />}></Route>
@@ -24,7 +31,8 @@ function App() {
           <Route path="/consultar" element={<Consultar />}></Route>
         </Routes>
       </BrowserRouter>
-      <Footer />
+      <Footer />*/}
+      
     </div>
 
   )

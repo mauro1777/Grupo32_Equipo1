@@ -1,0 +1,18 @@
+.contCard{
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.conDiv{
+    margin-left: 150px;
+    margin-top: 100px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.modaltamaño{
+    height: 600px;
+    width: 1500px;
+}
+

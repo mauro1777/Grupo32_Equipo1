@@ -22,3 +22,18 @@ h1{
     margin-top: 10vh;
     margin-bottom: 19vh;
 }
+
+.divI{
+    
+    height: 300px;
+}
+
+.entrada{
+    border-radius: 5px;
+	height: 40px;
+    width: 500px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+    border: 1px solid rgba(192,192,192);
+}

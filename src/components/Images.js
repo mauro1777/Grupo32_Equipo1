@@ -29,6 +29,7 @@ export class Images extends Component {
                     <div className="etiqueta">
                         <label className="image-upload" htmlFor="input" >
                             <IconoCamara icon={faCamera} />
+                            &nbsp;
                             Seleccionar Imagen
                         </label>
                     </div>

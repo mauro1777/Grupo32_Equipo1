@@ -5,16 +5,32 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import './Modificar.css'
 import { Inputt, Labell, LeyendaError, IconoValidacion } from './Elementos';
+import ProductContext from '../context/ProductContext'
 
-/*** const Label = styled.label`
-    ${props => props.valido === 'false' && css `
-        color: #F66060
-    `}
-    `;*/
+const objForm = {
+    cod: " ",
+    name: " ",
+    description: " ",
+    flavor: " ",
 
+    presentation: " ",
+    cont: " ",
+    price: " "
+}
 
 const ComponenteInput = ({ estado, cambiarEstado, label, placeholder, leyenda, expresionregular, name }) => {
 
+
+    {/**** //contextos
+
+    //Estados
+
+    //const [form, setForm] = useState(objForm);
+
+    //const handleForm = (e) => {
+     //   setForm({ ...form, [e.target.name]: e.target.value })
+    //}*/}
+    
 
     const onChange = (e) => {
         cambiarEstado({ ...estado, campo: e.target.value });
@@ -45,9 +61,9 @@ const ComponenteInput = ({ estado, cambiarEstado, label, placeholder, leyenda, e
                     valido={estado.valido}>
                 </Inputt>
                 <IconoValidacion
-                        icon={estado.valido === 'true' ? faCheckCircle : faTimesCircle}
-                        valido={estado.valido}
-                    />
+                    icon={estado.valido === 'true' ? faCheckCircle : faTimesCircle}
+                    valido={estado.valido}
+                />
             </InputGroup>
             <LeyendaError valido={estado.valido}>{leyenda}</LeyendaError>
         </div>

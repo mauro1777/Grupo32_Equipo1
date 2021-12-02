@@ -14,8 +14,28 @@ import styled, {css} from 'styled-components'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom'
 import Images from './Images.js'
 
+const objForm = {
+    cod: " ",
+    name: " ",
+    description: " ",
+    kind : " ",
+    flavor: " ",
+    brand: " ",
+    presentation: " ",
+    cont: " ",
+    price: " ",
+    id: ""
+}
+
 
 export default function FormExample() {
+
+    const [form, setForm] = useState(objForm);
+
+    const handleForm = (e) =>{
+        setForm({...form, [e.target.name]: e.target.value})
+    }
+
     const [codigo, cambiarCodido] = useState({campo:'', valido: null });
     const [nombre, cambiarNombre] = useState({campo:'', valido: null });
     const [descripcion, cambiarDescripcion] = useState({campo:'', valido: null });
@@ -41,7 +61,6 @@ export default function FormExample() {
 
     const onSubmit = (e) =>{
         e.preventDefault();
-
         if(codigo.valido === 'true' &&
         nombre.valido === 'true' &&
         descripcion.valido === 'true' &&
@@ -65,8 +84,9 @@ export default function FormExample() {
 
     return (
         <div className="div container align-items-center">
-
+            <hr/>
             <Card><Card.Header as="h5" className="letra text-center">Editar Productos</Card.Header></Card>
+            <hr/>
             <></>
             <></>
 
@@ -216,8 +236,8 @@ export default function FormExample() {
                         </Card.Body>
                     </Card>
                 </div>
-
             </div>
+            <hr/>
         </div>
     );
 }
