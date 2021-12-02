@@ -14,11 +14,12 @@ const Producto = () => {
             <h2>Producto</h2>
             <Formulario />
             <div className="contCard">
-                {products.map(e =>
+                {products.map((e) => (
                     <ProductCard
-                        key={e._id}
-                        objProduct={e}
-                        />
+                    key={e._id}
+                    objProduct={e}
+                />)
+
 
                 )}
             </div>

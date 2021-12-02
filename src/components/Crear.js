@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import {Card, Button, Form, InputGroup, FormControl, Row, Col} from 'react-bootstrap'
+import {Card, Button, Form, InputGroup, FormControl, Row, Col, Nav} from 'react-bootstrap'
 import { useContext, useState } from 'react'
-=======
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-import InputGroup from 'react-bootstrap/InputGroup'
-import FormControl from 'react-bootstrap/FormControl'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Nav from 'react-bootstrap/Nav';
-import { useState } from 'react'
->>>>>>> c2e414215f006f0f9ada677c848100ff5dcb2e9b
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import './Modificar.css'

@@ -1,4 +1,4 @@
-import { createContext , useEffect, useState } from "react";
+import React, { createContext , useEffect, useState } from "react";
 import { apiProducto, apiProductByUser } from "./Api";
 
 const ProductContext = createContext();
@@ -63,7 +63,7 @@ const ProductProvider = ({children}) => {
         return resp.status;
     }
 
-    const data = {handleCreate, getProducts, products, setProduct};
+    const data = {handleCreate, getProducts, setProduct,products };
 
     return <ProductContext.Provider value={data}>{children}</ProductContext.Provider>
 }

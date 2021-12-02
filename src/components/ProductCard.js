@@ -22,22 +22,30 @@ const ProductCard = ({objProduct, edit}) => {
         <>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" />
-                <Card.Body>
-                    <Card.Title>{objProduct.name}</Card.Title>
-                    <Card.Text>
-                        {objProduct.cod}
-                        {objProduct.name}
-                        {objProduct.description}
-                        {objProduct.kind}
-                        {objProduct.flavor}
-                        {objProduct.brand}
-                        {objProduct.presentation}
-                        {objProduct.cont}
-                        {objProduct.price}
+                <Card.Body className="TextBody" >
+                    <Card.Title className="TextTitle">{objProduct.name}</Card.Title>
+                    <Card.Text className= "TextCard">
+                        Código: {objProduct.cod}
+                        <hr className="line"/>
+                        Nombre: {objProduct.name}
+                        <br/>
+                        Descripción: {objProduct.description}
+                        <br/>
+                        Tpo: {objProduct.kind}
+                        <br/>
+                        Sabor: {objProduct.flavor}
+                        <br/>
+                        Marca: {objProduct.brand}
+                        <br/>
+                        Presentación: {objProduct.presentation}
+                        <br/>
+                        Contenido: {objProduct.cont}
+                        <hr className="line"/>
+                        Precio: {objProduct.price}
                     </Card.Text>
                     <Button variant="warning" onClick={handleShow}>Modificar</Button>
                     &nbsp;
-                    <Button variant="warning">Eliminar</Button>
+                    <Button variant="danger">Eliminar</Button>
                 </Card.Body>
             </Card>
             {/**VENTANA EMERGENTE (modal) */}

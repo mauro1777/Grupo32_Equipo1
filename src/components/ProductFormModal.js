@@ -29,22 +29,23 @@ const ProductFormModal = ({ show, handleClose, objProduct, handleUpdate }) => {
   useEffect(() => {
     setForm({
       cod: objProduct.cod,
-       name: objProduct.name, 
-       description: objProduct.description, 
-       kind: objProduct.kind,
-    flavor: objProduct.flavor, 
-    brand: objProduct.brand, 
-    presentation: objProduct.presentation, 
-    cont: objProduct.cont,
-  price: objProduct.price, 
-  id: objProduct._id });
+      name: objProduct.name,
+      description: objProduct.description,
+      kind: objProduct.kind,
+      flavor: objProduct.flavor,
+      brand: objProduct.brand,
+      presentation: objProduct.presentation,
+      cont: objProduct.cont,
+      price: objProduct.price,
+      id: objProduct._id
+    });
   }, [objProduct]);
 
   const handleForm = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleEdit = ()=> {
+  const handleEdit = () => {
     handleUpdate(form);
     setForm(objForm);
     handleClose();
@@ -147,7 +148,7 @@ const ProductFormModal = ({ show, handleClose, objProduct, handleUpdate }) => {
                       <Form.Control
                         type="number"
                         placeholder="Ingresa el contenido del producto"
-
+                        required
                         value={form.cont}
                         onChange={handleForm}
                         name="cont" />

@@ -16,3 +16,24 @@
     width: 1500px;
 }
 
+.TextCard{
+    font-weight: bold;
+    font-size: 14px
+}
+
+.TextTitle{
+    font-weight: bold;
+    font-size: 19px;
+    color: rgba(243, 19, 19, 0.623);
+}
+
+.TextBody{
+    background-color: #42938ca8;
+    border: 5ch;
+    margin: 5px;
+    border-color: rgb(109, 9, 9);
+}
+
+.line{
+    color:rgba(255, 4, 4, 0.795)
+}
