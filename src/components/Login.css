@@ -13,11 +13,12 @@
     width: 100%;
 }
 
-h1{
-    text-align: center;
+body{
+    align-items: center;
 }
 
 #login{
+<<<<<<< HEAD
     align-items: center;
     margin-top: 10vh;
     margin-bottom: 19vh;
@@ -37,3 +38,9 @@ h1{
 	transition: .3s ease all;
     border: 1px solid rgba(192,192,192);
 }
+=======
+   /* align-items: ;*/
+    margin-top: 3.3vh;
+    margin-bottom: 27vh;
+}
+>>>>>>> c2e414215f006f0f9ada677c848100ff5dcb2e9b

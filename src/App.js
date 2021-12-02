@@ -9,10 +9,14 @@ import Header from './components/Header Footer barra de menu principal/Header'
 import Footer from './components/Header Footer barra de menu principal/Footer'
 import Consultar from './components/Consultar.js'
 import Images from './components/Images.js'
+<<<<<<< HEAD
 import UnauthRouter from './routers/UnauthRouter';
 import AuthRouter from './routers/AuthRouter';
 import { useContext } from 'react';
 import AuthContext from './context/AuthContext';
+=======
+import Recetas from './components/Recetas'
+>>>>>>> c2e414215f006f0f9ada677c848100ff5dcb2e9b
 
 
 function App() {
@@ -29,6 +33,7 @@ function App() {
           <Route path="/crear" element={<Crear />}></Route>
           <Route path="/modificar" element={<Modificar />}></Route>
           <Route path="/consultar" element={<Consultar />}></Route>
+          <Route path="/recetas" element={<Recetas />}></Route>
         </Routes>
       </BrowserRouter>
       <Footer />*/}

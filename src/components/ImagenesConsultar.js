@@ -17,7 +17,7 @@ function ImagenesConsultar(){
                 <Card.Body>
                 <Row>
                         <Col xs={3} md={4}>
-                            <Image className="img" src="https://cdn.shopify.com/s/files/1/0285/7222/1545/products/Chocoramo_1200x1200.jpg?v=1579882455" rounded />
+                            <Image className="img" src="https://metrocolombiafood.vteximg.com.br/arquivos/ids/161292-1000-1000/7702177001783-1.jpg?v=636670254574200000" rounded />
                         </Col>
                     </Row>
                 </Card.Body>
