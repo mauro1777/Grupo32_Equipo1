@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 import '../CargarImagenes.css'
 import canasta from './basket2.svg'
 import { Link } from 'react-router-dom';
-import crear from '../Crear'
+import crear from '../Componentes sin usar/Crear'
 
 const Header = () => {
     return (

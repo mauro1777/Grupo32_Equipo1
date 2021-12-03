@@ -3,12 +3,13 @@ import { Card, Button, Form, InputGroup, FormControl, Row, Col } from 'react-boo
 import { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
-import './Modificar.css'
-import Input from './Input.js'
+import '../Modificar.css'
+import Input from './Input'
 import styled, { css } from 'styled-components'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom'
-import Images from './Images.js'
-import ProductContext from '../context/ProductContext'
+import Images from '../Images'
+import ProductContext from '../../context/ProductContext'
+//import ProductContext from '.../'
 
 const objForm = {
     cod: " ",

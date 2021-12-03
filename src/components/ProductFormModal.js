@@ -6,7 +6,7 @@ import { useContext, useState, useEffect } from 'react'
 import Images from './Images.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
-import { IconoCamara } from './Elementos';
+import { IconoCamara } from './Componentes sin usar/Elementos';
 
 const objForm = {
   cod: " ",
@@ -50,9 +50,6 @@ const ProductFormModal = ({ show, handleClose, objProduct, handleUpdate }) => {
     setForm(objForm);
     handleClose();
   }
-
-
-
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -164,8 +161,8 @@ const ProductFormModal = ({ show, handleClose, objProduct, handleUpdate }) => {
                         onChange={handleForm}
                         name="price" />
                     </Form.Group>
-                    {/** <label className="image-upload" htmlFor="input" >
-                            <IconoCamara icon={faCamera} />
+                    {/** Previsualización de la imagen >
+                            <img height="60px" wigth="60px" src={form.url_img} />
                             &nbsp;
                             Seleccionar Imagen
                         </label> */}

@@ -1,21 +1,29 @@
-import React, {useState, useContext} from 'react'
-import {Card, Button} from 'react-bootstrap'
+import React, { useState, useContext } from 'react'
+import { Card, Button } from 'react-bootstrap'
 import ProductContext from '../context/ProductContext';
 import ProductFormModal from './ProductFormModal';
 
 
-const ProductCard = ({objProduct, edit}) => {
+const ProductCard = ({ objProduct, edit }) => {
 
     const { setProduct } = useContext(ProductContext);
+    const { delProduct } = useContext(ProductContext)
     const [show, setShow] = useState(false);
-    
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     const handleUpdate = (obj) => {
         setProduct(obj);
     };
-  
+
+    {/**const handleDelete = (obj) => {
+        delProduct(obj);
+    } */}
+    
+
+
+
 
 
     return (
@@ -24,38 +32,47 @@ const ProductCard = ({objProduct, edit}) => {
                 <Card.Img variant="top" />
                 <Card.Body className="TextBody" >
                     <Card.Title className="TextTitle">{objProduct.name}</Card.Title>
-                    <Card.Text className= "TextCard">
+                    <Card.Text className="TextCard">
                         Código: {objProduct.cod}
-                        <hr className="line"/>
+                        <hr className="line" />
                         Nombre: {objProduct.name}
-                        <br/>
+                        <br />
                         Descripción: {objProduct.description}
-                        <br/>
+                        <br />
                         Tpo: {objProduct.kind}
-                        <br/>
+                        <br />
                         Sabor: {objProduct.flavor}
-                        <br/>
+                        <br />
                         Marca: {objProduct.brand}
-                        <br/>
+                        <br />
                         Presentación: {objProduct.presentation}
-                        <br/>
+                        <br />
                         Contenido: {objProduct.cont}
-                        <hr className="line"/>
+                        <hr className="line" />
                         Precio: {objProduct.price}
                     </Card.Text>
                     <Button variant="warning" onClick={handleShow}>Modificar</Button>
                     &nbsp;
-                    <Button variant="danger">Eliminar</Button>
+                    <Button variant="danger" onClick={handleDelete}>Eliminar</Button>
+                    {/** {edit ?
+                        (
+                        <>
+                            
+                        </>
+                        ) 
+                    : 
+                    <Button variant="success"> Consultar </Button>} */}
+
+
                 </Card.Body>
             </Card>
             {/**VENTANA EMERGENTE (modal) */}
-                <ProductFormModal
+            <ProductFormModal
                 show={show}
                 handleClose={handleClose}
                 objProduct={objProduct}
-                handleUpdate={handleUpdate}
-                />
-            </>
+            />
+        </>
     )
 }
 

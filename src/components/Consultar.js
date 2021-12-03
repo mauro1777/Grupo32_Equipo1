@@ -10,10 +10,11 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import './Modificar.css'
-import Input from './Input.js'
+import Input from './Componentes sin usar/Input'
 import styled, {css} from 'styled-components'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom'
 import ImagenesConsultar from './ImagenesConsultar.js'
+
 
 
 export default function FormExample() {

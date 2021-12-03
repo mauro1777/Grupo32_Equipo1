@@ -1,12 +1,13 @@
 import React from 'react'
 import { Route, Routes} from 'react-router'
 import Catalogo from '../components/Catalogo'
-import Crear from '../components/Crear'
+import Crear from '../components/Componentes sin usar/Crear'
 import Producto from '../components/Producto'
 import Dashboard from '../pages/private/Dashboard'
 import Modificar from '../components/Modificar'
 import Consultar from '../components/Consultar'
 import Formulario from '../components/Formulario'
+import Recetas from '../components/Recetas'
 
 
 const AuthRouter = () => {
@@ -19,6 +20,7 @@ const AuthRouter = () => {
                 <Route path="modificar" element={<Modificar/>}/>
                 <Route path="consultar" element={<Consultar/>}/>
                 <Route path="formulario" element={<Formulario/>}/>
+                <Route path="recetas" element={<Recetas/>}/>
             </Route>
         </Routes>
     )

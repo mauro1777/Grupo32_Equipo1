@@ -33,10 +33,11 @@ const Dashboard = () => {
                         <Nav className="me-auto">
                         <Nav.Link as={Link} to="/" href="#home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/catalogo" href="#catalogo">catalogo</Nav.Link>
-                            <Nav.Link as={Link} to="/crear" href="#crear" >Crear producto</Nav.Link>
+                        {/**<Nav.Link as={Link} to="/crear" href="#crear" >Crear producto</Nav.Link>
                             <Nav.Link as={Link} to="/modificar" href="#modificar">Modificar producto</Nav.Link>
-                            <Nav.Link as={Link} to="/consultar" href="#consultar">Consultar producto</Nav.Link>
-                            <Nav.Link href="#pricing">Recetas</Nav.Link>
+                            <Nav.Link as={Link} to="/consultar" href="#consultar">Consultar producto</Nav.Link> */}
+                            
+                            <Nav.Link as={Link} to="/recetas" href="#recetas">Recetas</Nav.Link>
                             <Nav.Link  href="#salir" onClick={handleLogout} >Salir</Nav.Link>
                         </Nav>
                     </Navbar.Brand>

@@ -3,9 +3,9 @@ import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faExclamationTriangle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
-import './Modificar.css'
+import '../Modificar.css'
 import { Inputt, Labell, LeyendaError, IconoValidacion } from './Elementos';
-import ProductContext from '../context/ProductContext'
+import ProductContext from '../../context/ProductContext'
 
 const objForm = {
     cod: " ",

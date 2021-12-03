@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Images.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
-import { IconoCamara } from './Elementos';
+import { IconoCamara } from './Componentes sin usar/Elementos';
 
 export class Images extends Component {
     state = {

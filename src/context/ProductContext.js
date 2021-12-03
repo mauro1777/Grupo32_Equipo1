@@ -6,9 +6,11 @@ const ProductContext = createContext();
 const ProductProvider = ({children}) => {
 
     const [products, setProducts] = useState([]);
+    const [catalogue, setCatalogue] = useState([])
 
     useEffect(()=>{
         getProducts();
+        getAllProducts();
     },[])
 
     const handleCreate = async (objProduct)=>{
@@ -49,7 +51,7 @@ const ProductProvider = ({children}) => {
         const token = localStorage.getItem('token');
         let resp = await fetch(apiProducto, {
             method: 'PUT',
-            header: {
+            headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             },
@@ -63,7 +65,35 @@ const ProductProvider = ({children}) => {
         return resp.status;
     }
 
-    const data = {handleCreate, getProducts, setProduct,products };
+    {/**const delProduct = async (objProduct)=> {
+        const token = localStorage.getItem('token');
+        let resp = await fetch(apiProducto, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`
+            },
+            body: JSON.stringify(objProduct)
+        });
+        if(resp.status === 200){
+            setProducts();
+        }
+
+        return resp.status;
+
+    } */}
+
+    
+
+    const getAllProducts = ()=>{
+        fetch(apiProducto).then(async (resp)=>{
+            let json = await resp.json();
+            setCatalogue(json);
+        }).finally();
+    }
+    
+
+    const data = {handleCreate, getProducts, setProduct,products, getAllProducts, catalogue};
 
     return <ProductContext.Provider value={data}>{children}</ProductContext.Provider>
 }

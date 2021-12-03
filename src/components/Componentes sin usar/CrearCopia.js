@@ -12,7 +12,7 @@ import './Modificar.css'
 import Input from './Input.js'
 import styled, {css} from 'styled-components'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom'
-import Images from './Images.js'
+import Images from '../Images.js'
 
 
 export default function FormExample() {
