@@ -16,10 +16,11 @@ const ProductCard = ({ objProduct, edit }) => {
     const handleUpdate = (obj) => {
         setProduct(obj);
     };
-
-    {/**const handleDelete = (obj) => {
+    
+{/**  const handleDelete = (obj) => {
         delProduct(obj);
-    } */}
+    }*/}
+   
     
 
 
@@ -53,7 +54,7 @@ const ProductCard = ({ objProduct, edit }) => {
                     </Card.Text>
                     <Button variant="warning" onClick={handleShow}>Modificar</Button>
                     &nbsp;
-                    <Button variant="danger" onClick={handleDelete}>Eliminar</Button>
+                    <Button variant="danger" onClick={handleShow}>Eliminar</Button>
                     {/** {edit ?
                         (
                         <>
