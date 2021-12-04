@@ -10,7 +10,7 @@ const Catalogo = () => {
     return (
         <div>
             <div className="contCard">
-                {catalogue.map(e=><ProductCard key={e._id} objProduct={e}/>)}
+                {catalogue.map(e=><ProductCard key={e._id} objProduct={e} edit={false}/>)}
             </div>
         </div>
 

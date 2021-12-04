@@ -18,6 +18,7 @@ const Producto = () => {
                     <ProductCard
                     key={e._id}
                     objProduct={e}
+                    edit={true}
                 />)
 
 
