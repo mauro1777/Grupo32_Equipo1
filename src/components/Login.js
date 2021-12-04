@@ -7,14 +7,13 @@ import './Components.css'
 const objForm = {
     email: "",
     password: ""
-}
+};
 
 const Login = () => {
     //Usar contexto
     const { handleLogin } = useContext(AuthContext);
     //Crear estado del formulario
     const [form, setForm] = useState(objForm);
-
     const [show, setShow] = useState(false);
 
     const handleForm = (e) => {
@@ -32,17 +31,15 @@ const Login = () => {
                 setShow(true);
             }
         });
-    }
+    };
 
     return (
-        <>
             <div className="login" id="login" border="light">
                 <h2 className="nombreprincipal">Iniciar Sesión</h2>
                 <hr className="lineForm" />
                 <Alert variant="danger" show={show}>
                     Usuario no autorizado
                 </Alert>
-
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="LoginEmail">
                         <Form.Label className="etiqueta">Correo</Form.Label>
@@ -52,16 +49,15 @@ const Login = () => {
                         <Form.Label className="etiqueta">Contraseña</Form.Label>
                         <Form.Control className="entrada" required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Ingresa tu Contraseña" />
                     </Form.Group>
-
                     <Button type="submit" className="botones rounded-0" style={{ background: "#724293" }}  >
                         Ingresar
                     </Button>
                 </Form>
             </div>
-        </>
+       
 
     );
 
-}
+};
 
 export default Login;

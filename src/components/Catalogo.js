@@ -9,7 +9,6 @@ const Catalogo = () => {
 
     return (
         <div>
-            <h2>Catalogo</h2>
             <div className="contCard">
                 {catalogue.map(e=><ProductCard key={e._id} objProduct={e}/>)}
             </div>

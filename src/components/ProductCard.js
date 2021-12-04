@@ -18,7 +18,7 @@ const ProductCard = ({ objProduct, edit }) => {
     const handleUpdate = (obj) => {
         setProduct(obj);
     };
- 
+
     return (
         <>
             <Card style={{ width: '18rem' }}>
@@ -44,9 +44,17 @@ const ProductCard = ({ objProduct, edit }) => {
                         <hr className="line" />
                         Precio: {objProduct.price}
                     </Card.Text>
-                    <Button variant="warning" onClick={handleShow}>Modificar</Button>
-                    &nbsp;
-                    <Button variant="danger" onClick={()=>handleDelete(objProduct._id)}>Eliminar</Button>
+                    {edit ? (
+                        <>
+                            <Button variant="warning" onClick={handleShow}>Modificar</Button>
+                            &nbsp;
+                            <Button variant="danger" onClick={() => handleDelete(objProduct._id)}>Eliminar</Button>
+                        </>
+                    )
+                :
+                <Button variant="success">Ver Detalles</Button>
+                }
+
                 </Card.Body>
             </Card>
             {/**VENTANA EMERGENTE (modal) */}

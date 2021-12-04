@@ -7,19 +7,19 @@ import '../../components/Bienvenido.css'
 const Auth = () => {
     return (
         <>
-        <div>
-            <h2 className="Prueba">Bienvenido A Tu Catálogo de Productos</h2>
-        </div>
-        
-        <div className="tarjetaHome" >
             <div>
-                <Registro/>
+                <h2 className="Prueba">Bienvenido A Tu Catálogo de Productos</h2>
             </div>
-            <div>
-                <Login />
+
+            <div className="tarjetaHome" >
+                <div>
+                    <Registro />
+                </div>
+                <div>
+                    <Login />
+                </div>
             </div>
-        </div>
-</>
+        </>
     )
 }
 
