@@ -3,14 +3,14 @@ import Login from '../../components/Login'
 import Registro from '../../components/Registro'
 import '../../components/Components.css'
 import '../../components/Bienvenido.css'
+import { Link } from 'react-router-dom'
 
 const Auth = () => {
     return (
         <>
-            <div>
+        <Link to="/">Página Principal</Link> 
+        <hr/>
                 <h2 className="Prueba">Bienvenido A Tu Catálogo de Productos</h2>
-            </div>
-
             <div className="tarjetaHome" >
                 <div>
                     <Registro />
