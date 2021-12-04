@@ -65,7 +65,7 @@ const ProductProvider = ({children}) => {
         return resp.status;
     }
 
-    {/**const delProduct = async (objProduct)=> {
+    const handleDelete = async (id)=> {
         const token = localStorage.getItem('token');
         let resp = await fetch(apiProducto, {
             method: 'DELETE',
@@ -73,17 +73,15 @@ const ProductProvider = ({children}) => {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             },
-            body: JSON.stringify(objProduct)
+            body: JSON.stringify({id: id})
         });
         if(resp.status === 200){
-            setProducts();
+            getProducts();
         }
 
         return resp.status;
 
-    } */}
-
-    
+    }
 
     const getAllProducts = ()=>{
         fetch(apiProducto).then(async (resp)=>{
@@ -93,7 +91,7 @@ const ProductProvider = ({children}) => {
     }
     
 
-    const data = {handleCreate, getProducts, setProduct,products, getAllProducts, catalogue};
+    const data = {handleCreate, getProducts, setProduct, products, getAllProducts, catalogue, handleDelete};
 
     return <ProductContext.Provider value={data}>{children}</ProductContext.Provider>
 }

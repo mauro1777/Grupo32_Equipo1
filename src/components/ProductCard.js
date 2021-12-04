@@ -2,12 +2,14 @@ import React, { useState, useContext } from 'react'
 import { Card, Button } from 'react-bootstrap'
 import ProductContext from '../context/ProductContext';
 import ProductFormModal from './ProductFormModal';
+import ProductModalDelete from './ProductModalDelete';
 
 
 const ProductCard = ({ objProduct, edit }) => {
 
-    const { setProduct } = useContext(ProductContext);
-    const { delProduct } = useContext(ProductContext)
+    const { setProduct, handleDelete } = useContext(ProductContext);
+
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -16,17 +18,7 @@ const ProductCard = ({ objProduct, edit }) => {
     const handleUpdate = (obj) => {
         setProduct(obj);
     };
-    
-{/**  const handleDelete = (obj) => {
-        delProduct(obj);
-    }*/}
-   
-    
-
-
-
-
-
+ 
     return (
         <>
             <Card style={{ width: '18rem' }}>
@@ -54,17 +46,7 @@ const ProductCard = ({ objProduct, edit }) => {
                     </Card.Text>
                     <Button variant="warning" onClick={handleShow}>Modificar</Button>
                     &nbsp;
-                    <Button variant="danger" onClick={handleShow}>Eliminar</Button>
-                    {/** {edit ?
-                        (
-                        <>
-                            
-                        </>
-                        ) 
-                    : 
-                    <Button variant="success"> Consultar </Button>} */}
-
-
+                    <Button variant="danger" onClick={()=>handleDelete(objProduct._id)}>Eliminar</Button>
                 </Card.Body>
             </Card>
             {/**VENTANA EMERGENTE (modal) */}
@@ -72,6 +54,7 @@ const ProductCard = ({ objProduct, edit }) => {
                 show={show}
                 handleClose={handleClose}
                 objProduct={objProduct}
+                handleUpdate={handleUpdate}
             />
         </>
     )

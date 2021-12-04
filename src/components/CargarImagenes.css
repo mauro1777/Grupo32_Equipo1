@@ -15,10 +15,15 @@
 }
 
 .letraHeader{
-    font-size: 30px;
+    font-size: 40px;
     color: whitesmoke;
     border: 4px;
     border-color: black;
+}
+
+.letraEtiquetas{
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .foot {

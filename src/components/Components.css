@@ -1,7 +1,8 @@
 .contCard{
     margin-top: 30px;
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 40px;
 }
 
 .conDiv{
@@ -21,6 +22,10 @@
     font-size: 14px
 }
 
+.etiqueta{
+    font-weight: bold;
+}
+
 .TextTitle{
     font-weight: bold;
     font-size: 19px;
@@ -36,4 +41,52 @@
 
 .line{
     color:rgba(255, 4, 4, 0.795)
+}
+
+.login{
+    border: 5px solid rgb(0, 0, 0); 
+    margin: 60px;
+    padding: 15px;
+    border-radius: 10% 10% 10% 10%;
+    background-color: rgb(136, 207, 65);
+}
+
+.register{
+    border: 5px solid rgb(0, 0, 0); 
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10% 10% 10% 10%;
+    background-color: rgb(136, 207, 65);
+}
+
+
+.tarjetaHome{
+    margin-left: 100px;
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 20px;
+    padding: 0px;
+    position: absolute;
+    top: 15%;
+}
+
+.nombreprincipal{
+    font-weight: bold;
+}
+
+.lineForm{
+    color:blueviolet;
+}
+
+.Prueba{
+    margin: 5px;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    left: 10%;
+    top: 5%;
 }

@@ -55,7 +55,7 @@ const Formulario = () => {
                 <div className="col-md-6">
                     <Card>
                         <Card.Body >
-                            <Form onSubmit={handleSubmit}>
+                            <Form onSubmit={handleSubmit} className="formulario">
                                 <Form.Group className="mb-3" controlId="FormCod">
                                     <Form.Label>Codigo</Form.Label>
                                     <Form.Control

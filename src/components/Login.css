@@ -3,6 +3,7 @@
     border: 0ch;
     margin: 5px;
     border-color: white;
+    position:center;
 }
 
 .botones:hover{
@@ -17,11 +18,10 @@ body{
     align-items: center;
 }
 
-#login{
-
+.login{
     align-items: center;
-    margin-top: 10vh;
-    margin-bottom: 19vh;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
 }
 
 .divI{

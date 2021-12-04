@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useContext, useState, useEffect }  from 'react'
 import Modificar from './Modificar'
 import './Components.css'
 import { Card, Button, Form, InputGroup, FormControl, Row, Col, Modal } from 'react-bootstrap'
-import { useContext, useState, useEffect } from 'react'
 import Images from './Images.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
@@ -50,6 +49,8 @@ const ProductFormModal = ({ show, handleClose, objProduct, handleUpdate }) => {
     setForm(objForm);
     handleClose();
   }
+
+  
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -166,7 +167,14 @@ const ProductFormModal = ({ show, handleClose, objProduct, handleUpdate }) => {
                             &nbsp;
                             Seleccionar Imagen
                         </label> */}
-
+                    <input type="file" accept="image/*" name="image-upload" id="input" />
+                    <div className="etiqueta">
+                      <label className="image-upload" htmlFor="input" >
+                        <IconoCamara icon={faCamera} />
+                        &nbsp;
+                        Seleccionar Imagen
+                      </label>
+                    </div>
 
                   </Form>
                 </Card.Body>
@@ -185,11 +193,11 @@ const ProductFormModal = ({ show, handleClose, objProduct, handleUpdate }) => {
           Cerrar
         </Button>
         <Button variant="primary" onClick={handleEdit}>
-          Update
+          Modificar
         </Button>
       </Modal.Footer>
     </Modal>
   )
 }
 
-export default ProductFormModal
+export default ProductFormModal;

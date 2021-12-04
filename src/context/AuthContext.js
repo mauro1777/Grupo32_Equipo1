@@ -9,12 +9,12 @@ const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useState(false);
     const navigate = useNavigate();
 
-    useEffect(()=>{
+    useEffect(() => {
         let token = localStorage.getItem('token');
-        if(token){
+        if (token) {
             setAuth(true);
         }
-    },[]);
+    }, []);
 
     const handleRegistro = (ObjUser) => {
         //Realizar petición al servidor
@@ -36,10 +36,10 @@ const AuthProvider = ({ children }) => {
             } else {
                 console.log('No estás registrado')
             }
-        }).catch(error => {
+        }).catch((error) => {
             console.log(error);
-        });
-    }
+        }).finally();
+    };
 
     const handleLogin = async (ObjUser) => {
         const resp = await fetch(apiLogin, {
@@ -50,14 +50,17 @@ const AuthProvider = ({ children }) => {
             body: JSON.stringify(ObjUser)
         });
         if (resp.status === 200) {
+            let json = await resp.json();
+            localStorage.setItem("token", json.token);
             setAuth(true);
             navigate('/');
         }
-        return resp;
-    }
+        return resp.status;
+    };
 
     const handleLogout = () => {
         localStorage.removeItem('token');
+        navigate("/");
         setAuth(false);
     }
 
