@@ -8,11 +8,10 @@ const Catalogo = () => {
     const { catalogue } = useContext(ProductContext);
 
     return (
-        <div>
-            <div className="contCard">
-                {catalogue.map(e=><ProductCard key={e._id} objProduct={e} edit={false}/>)}
-            </div>
+        <div className="contCard">
+            {catalogue.map(e => <ProductCard key={e._id} objProduct={e} edit={false} />)}
         </div>
+
 
     )
 }
