@@ -109,27 +109,7 @@ export default function Nosotros() {
                 </Card>
                 <br />
                 <Card border="success">
-                    <Row>
-                        <Col>
-                            <Card.Img src=""  />
-                        </Col>
-                        <Col><Card.Body>
-                            <Card.Title>Himelda Palacios</Card.Title>
-                            <Card.Text>
-                                <div>
-                                Estudiante Programación Mision Tic 2022
-                                    <p>
-                                        <ul>
-                                            <li>Hola, soy Himelda Palacios, soy de la ciudad de Bogotá, soy ing. De sistema, estoy certificada como Scrum Master. Trabajo para una empresa que presta servicios a Avinca.</li>
-                                            
-                                        </ul>
-                                    </p>
-                                </div>
-
-                            </Card.Text>
-                        
-                        </Card.Body></Col>
-                    </Row>
+                
                 </Card>
                 <br />
             </Container>
