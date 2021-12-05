@@ -100,7 +100,6 @@ export default function Nosotros() {
                                     <p>
                                         <ul>
                                             <li>Hola, soy Himelda Palacios, soy de la ciudad de Bogotá, soy ing. De sistema, estoy certificada como Scrum Master. Trabajo para una empresa que presta servicios a Avinca.</li>
-                                            
                                         </ul>
                                     </p>
                                 </div>
