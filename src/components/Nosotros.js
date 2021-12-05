@@ -41,7 +41,7 @@ export default function Nosotros() {
                 <br />
                 <Card border="success">
                     <Row>
-                        <Col class="cloum1">
+                        <Col>
                             <Card.Img src="https://avatars.githubusercontent.com/u/78944732?v=4" />
                         </Col>
                         <Col><Card.Body>
@@ -85,12 +85,9 @@ export default function Nosotros() {
                         
                         </Card.Body></Col>
                     </Row>
-                </Card>
-                <br />
-                <Card border="success">
                     <Row>
                         <Col>
-                            <Card.Img src=""  />
+                            <Card.Img src="https://media-exp1.licdn.com/dms/image/C4E03AQEy0DSL8492fg/profile-displayphoto-shrink_800_800/0/1517013259394?e=1644451200&v=beta&t=fUtYe2YukU_xTplJrMZXblo5MWJkC2gyE_V0n-aKc6w"  />
                         </Col>
                         <Col><Card.Body>
                             <Card.Title>Himelda Palacios</Card.Title>
@@ -108,6 +105,10 @@ export default function Nosotros() {
                         
                         </Card.Body></Col>
                     </Row>
+                </Card>
+                <br />
+                <Card border="success">
+                
                 </Card>
                 <br />
             </Container>
