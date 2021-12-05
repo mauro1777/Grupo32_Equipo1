@@ -17,7 +17,7 @@ export default function Nosotros() {
                 <Card border="success">
                     <Row id="stilefila">
                         <Col>
-                            <Card.Img src="https://scontent.fclo9-1.fna.fbcdn.net/v/t1.18169-1/p200x200/29572264_10209444859279022_5718249205321465798_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=7206a8&_nc_ohc=Eg8n_q94oZAAX8Uuyqc&tn=ZXQGfaJcL2jO4bBX&_nc_ht=scontent.fclo9-1.fna&oh=ec0210512cc87c4c392fceae2a93048d&oe=616A246B" />
+                            <Card.Img src="https://avatars.githubusercontent.com/u/89588662?v=4" />
                         </Col>
                         <Col><Card.Body>
                             <Card.Title>Mauricio Arango</Card.Title>
@@ -76,6 +76,30 @@ export default function Nosotros() {
                                     <p>
                                         <ul>
                                             <li>Hola, soy Nelson Herrera, soy de la ciudad de Cartagena, actualmente vivo en Mompós-Bolívar. Tengo estudios en ingeniería de sistemas, no culminados (VIII semestre), tengo cursos en diseño de páginas web con Macromedia Dreamweaver, ofimática, instalaciones eléctricas y en Salud y Seguridad en el Trabajo. Trabajo en el departamento de sistemas en una institución educativa del estado.</li>
+                                            
+                                        </ul>
+                                    </p>
+                                </div>
+
+                            </Card.Text>
+                        
+                        </Card.Body></Col>
+                    </Row>
+                </Card>
+                <br />
+                <Card border="success">
+                    <Row>
+                        <Col>
+                            <Card.Img src=""  />
+                        </Col>
+                        <Col><Card.Body>
+                            <Card.Title>Himelda Palacios</Card.Title>
+                            <Card.Text>
+                                <div>
+                                Estudiante Programación Mision Tic 2022
+                                    <p>
+                                        <ul>
+                                            <li>Hola, soy Himelda Palacios, soy de la ciudad de Bogotá, soy ing. De sistema, estoy certificada como Scrum Master. Trabajo para una empresa que presta servicios a Avinca.</li>
                                             
                                         </ul>
                                     </p>
