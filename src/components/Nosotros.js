@@ -41,7 +41,7 @@ export default function Nosotros() {
                 <br />
                 <Card border="success">
                     <Row>
-                        <Col class="cloum1">
+                        <Col>
                             <Card.Img src="https://avatars.githubusercontent.com/u/78944732?v=4" />
                         </Col>
                         <Col><Card.Body>
